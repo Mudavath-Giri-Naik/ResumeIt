@@ -1,0 +1,138 @@
+/**
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
+
+.ruler-container {
+    display: flex;
+    height: 20px;
+    background: #f1f3f4;
+    border-bottom: 1px solid #dadce0;
+    position: relative;
+    width: 100%;
+    /* Fill the wrapper which should match page width */
+    margin: 0 auto;
+    align-items: flex-end;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.ruler-margin-left,
+.ruler-margin-right {
+    height: 100%;
+    background-color: #e8eaed;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.ruler-track {
+    flex-grow: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    /* White comes from container */
+}
+
+.ruler-tick {
+    color: #5f6368;
+    /* flex removed */
+    height: 100%;
+    border-left: 1px solid transparent;
+    width: 1px;
+}
+
+.ruler-tick::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #dadce0;
+}
+
+.ruler-tick.major::before {
+    height: 8px;
+}
+
+.ruler-tick.half::before {
+    height: 6px;
+}
+
+.ruler-tick.quarter::before {
+    height: 4px;
+}
+
+.ruler-tick.minor::before {
+    height: 3px;
+}
+
+.ruler-number {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    font-size: 10px;
+}
+
+/* Markers */
+.ruler-marker-first-line,
+.ruler-marker-left-indent,
+.ruler-marker-right-indent {
+    position: absolute;
+    cursor: col-resize;
+    z-index: 10;
+    width: 0;
+    height: 0;
+}
+
+/* Shapes via CSS borders for now, or SVGs */
+.ruler-marker-first-line {
+    top: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #4285f4;
+    transform: translateX(-6px);
+    /* Center */
+}
+
+.ruler-marker-left-indent {
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-6px);
+}
+
+.ruler-marker-left-indent::before {
+    /* Triangle part */
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #4285f4;
+}
+
+.ruler-marker-left-indent::after {
+    /* Rect part */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 12px;
+    height: 6px;
+    background-color: #4285f4;
+}
+
+.ruler-marker-right-indent {
+    bottom: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #4285f4;
+    transform: translateX(-6px);
+}

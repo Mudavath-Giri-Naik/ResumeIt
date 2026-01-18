@@ -1,70 +1,16 @@
-# ResumeIt - AI-Powered Resume Editor
+# React + Vite
 
-A modern landing page for ResumeIt, built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Inspired by Aceternity UI design principles.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- 🎨 Modern, clean design with minimal UI
-- 📱 Fully responsive layout
-- ⚡ Smooth animations with Framer Motion
-- 🎯 Clear call-to-actions throughout
-- 💼 Resume-focused landing page with all key sections
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Getting Started
+## React Compiler
 
-First, install the dependencies:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```bash
-npm install
-```
+## Expanding the ESLint configuration
 
-Then, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Project Structure
-
-```
-├── app/
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Home page
-│   └── globals.css         # Global styles
-├── components/
-│   ├── Navigation.tsx      # Top navigation bar
-│   ├── AnnouncementBanner.tsx
-│   ├── HeroSection.tsx     # Main hero section
-│   ├── ProductPreview.tsx  # Product mockup
-│   ├── HowItWorks.tsx      # 4-step process
-│   ├── KeyFeatures.tsx     # Feature cards
-│   ├── Differentiation.tsx # vs competitors
-│   ├── UseCases.tsx
-│   ├── PricingPreview.tsx
-│   ├── FinalCTA.tsx
-│   └── Footer.tsx
-└── lib/
-    └── utils.ts            # Utility functions
-```
-
-## Technologies Used
-
-- **Next.js 14** - React framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **Aceternity UI patterns** - Design inspiration
-
-## Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## License
-
-MIT
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

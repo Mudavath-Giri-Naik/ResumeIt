@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ResumeIt - Edit, Optimize, and Tailor Your Resume with AI",
-  description: "Upload your resume, edit it like Google Docs, chat with AI for improvements, test ATS score with any job description, and download a job-ready PDF.",
+  description: "Upload your resume, edit it like Google Docs, test ATS score with any job description, and download a job-ready PDF.",
 };
 
 export default function RootLayout({
